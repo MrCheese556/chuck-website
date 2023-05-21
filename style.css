@@ -1,0 +1,174 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+}
+
+#imglogo{
+    position: absolute;
+    left:1%;
+    top:1%;
+    width: 300px;
+    height: 300px;
+}
+html, body {
+    margin: 0;
+    height: 100%;
+}
+body {
+
+    background-image: url("./bg.jpg");
+}
+h1 {
+    position: relative;
+    top:20%;
+    text-align: center;
+    color:antiquewhite;
+    font-size: 4em;
+    z-index: 1;
+}
+#rightblock {
+    overflow: visible;
+    position: inherit;
+    height: 100%;
+    width: 50%;
+    left: 50%;
+    background-color: rgb(4, 4, 38);
+    background-color: #0c0ce1;
+
+    background-image:  repeating-radial-gradient( circle at 0 50%, transparent 0, #020213 10px ), repeating-linear-gradient( #03041d55, #080e7c );
+    z-index: 4;
+    border-left: 6px solid rgba(102, 119, 158, 0.7);
+    box-shadow: 80px 20px 80px 80px rgba(28, 76, 144, 0.8);
+    animation: e 1s ease-in 3.8s, rightt 3.5s linear 8s;
+    animation-fill-mode: forwards;
+}
+#leftblock {
+    overflow: visible;
+    position: inherit;
+    height: 100%;
+    width: 50%;
+    left: 0%;
+    background-color: #0580a1;
+    background-image: radial-gradient(circle at center center, #064e7d, #1b4861), repeating-radial-gradient(circle at right center, #064c53, #044157, 10px, transparent 20px, transparent 10px);
+background-blend-mode: multiply;
+    z-index: 3;
+    animation: lefft 3.5s linear 8s;
+    animation-fill-mode: forwards;
+
+}
+#leftblock::before{
+    overflow: visible;
+    content: "";
+    display:block;
+    position: relative;
+    border-left:3px solid rgba(102, 119, 158, 0.7);
+    border-right:2px solid rgba(37, 42, 54, 0.7);
+    left:100%;
+    height: 100%;
+    z-index: 6; 
+    width: 100px;
+    background: linear-gradient(to right, #011b22,#011b22,#011b22, #000000);
+    box-shadow: 0px 0px 50px 50px rgba(1, 7, 15, 1);
+    animation: borderl 1s ease-in 3.5s;
+    animation-fill-mode: forwards;
+}
+#logo {
+    stroke:#95a4c4;
+    stroke-dasharray: 1600;
+    stroke-dashoffset: 1600;
+    animation:load 5s ease-in, stred 2s linear 5.5s;
+    animation-fill-mode: forwards;
+    position: relative;
+    left:0%;
+    top:13%;
+}
+#load-cont{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+
+}
+#circle{
+    position:absolute;
+    align-self: center;
+    position: absolute;
+    width: 42vh;
+    height: 42vh;
+    top: 50%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    
+    border-radius: 100%;
+    background: rgba(0, 1, 4, 1);
+	box-shadow: 0 20px 40px rgba(0,0,0,0.8);
+	border-top: 3px solid rgba(140, 146, 210, 0.7);
+	border-bottom: 5px solid rgba(32, 35, 41, 0.7);
+    z-index: 5;
+    animation: redd 1s ease-in 3.5s;
+    animation-fill-mode: forwards;
+
+}
+@keyframes borderl {
+    to{
+        border-left:3px solid crimson;
+    }
+}
+@keyframes e {
+    to{
+        border-left: 6px solid crimson;
+    }
+}
+ @keyframes stred {
+    20% {
+        stroke:#95a4c4;
+    }
+    21% {
+        stroke:rgb(203, 108, 127);
+    }
+    23% {
+        stroke:rgb(197, 99, 119);
+    }
+    24% {
+        stroke:#95a4c4;
+    }
+    45% {
+        stroke:#95a4c4;
+    }
+    46% {
+        stroke:rgb(202, 92, 114);
+    }
+    49% {
+        stroke:rgb(207, 122, 139);
+    }
+    50% {
+        stroke:#95a4c4;
+    }
+    100%{
+        stroke:crimson;
+    }
+ }
+@keyframes redd {
+    to {
+        border-top: 3px solid rgba(236, 33, 33, 0.7);
+	border-bottom: 5px solid rgba(233, 36, 42, 0.7);
+    }
+}
+@keyframes load {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes rightt{
+    to {
+        left:110%;
+    }
+}
+@keyframes lefft{
+    to {
+        left:-60%;
+    }
+}
